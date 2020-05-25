@@ -1,0 +1,75 @@
+.user-crud h5{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+}
+.user-crud{
+    width: 100%;
+}
+.table-list-users{
+    width: 50%;
+    position: absolute;
+    left: 0;
+}
+.table-list-users > h5{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.table{
+    width: 100%;
+    text-align: left;
+    padding-left: 40px;
+    margin: auto;
+}
+.form-add-user{
+    width: 50%;
+    position: fixed;
+    right: 0;
+}
+.form-user{
+    width: 100%;
+}
+.form-user > h5{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.container-message{
+    margin: auto;
+    width: 80%;
+    height: 30px;
+    background: rgb(81, 255, 124);
+    border: transparent;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+.message-text .txt-message{
+    
+}
+.input-form-user{
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+.btn-form-user{
+    margin: auto;
+    display: block;
+    margin-top: 15px;
+    width: 120px;
+}
+.form-edit-user{
+    width: 50%;
+    position: fixed;
+    right: 0;
+    margin-top: 350px;
+    opacity: 0.5;
+}

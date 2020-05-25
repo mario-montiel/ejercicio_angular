@@ -1,0 +1,87 @@
+<div class="user-crud">
+    <h5>Lista de usuarios</h5>
+    <div class="container-message" *ngIf="msgUserDeleted !== 0">
+        <p class="txt-message">Usuario eliminado con éxito</p>
+    </div>
+    <div class="table-list-users">
+        <h5>Usuarios actuales:</h5>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Actualizar</th>
+                  <th>Eliminar</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of user">
+                  <td>{{item.id}}</td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.email}}</td>
+                  <td>
+                    <button mat-raised-button color="primary" (click)="fillDataUpdate(item)">
+                        <span class="material-icons">
+                            edit
+                        </span>
+                    </button>
+                  </td>
+                  <td>
+                    <button mat-raised-button color="warn" (click)="delete(item)">
+                        <span class="material-icons">
+                            delete
+                        </span>
+                    </button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+      <div class="form-add-user">
+        <form #addUserPost="ngForm" class="form-user" (ngSubmit)="add(addUserPost.value)">
+            <div class="container-message" *ngIf="msgUserAdded !== 0">
+                <p class="txt-message">Usuario agregado con éxito</p>
+            </div>
+            <h5>Agregar usuario</h5>
+            <mat-form-field class="input-form-user">
+                <mat-label class="label">Ingrese su usuario</mat-label>
+                <input name="name" matInput placeholder="Usuario" ngModel required>
+            </mat-form-field>
+            <mat-form-field class="input-form-user">
+                <mat-label class="label">Ingrese su correo electrónico</mat-label>
+                <input name="email" matInput placeholder="Correo electrónico" ngModel required>
+            </mat-form-field>
+            <mat-form-field class="input-form-user">
+                <mat-label class="label">Ingrese su contraseña</mat-label>
+                <input name="password" matInput placeholder="Contraseña" ngModel required>
+            </mat-form-field>
+            <button aria-label="Show an example snack-bar" type="submit" class="btn-form-user" mat-raised-button color="primary">Agregar</button>
+          
+        </form>
+      </div>
+      <div id="form-edit-user" class="form-edit-user">
+        <form #updUserPost="ngForm" class="form-user" (ngSubmit)="update(updUserPost.value)">
+            <div class="container-message" *ngIf="msgUserEdited !== 0">
+                <p class="txt-message">Usuario editado con éxito</p>
+            </div>
+            <h5>Editar usuario</h5>
+            <mat-form-field class="input-form-user">
+                <mat-label class="label">Usuario:</mat-label>
+                <input name="name" [(ngModel)]="usertochange.name" matInput placeholder="Usuario" ngModel required>
+            </mat-form-field>
+            <mat-form-field class="input-form-user">
+                <mat-label class="label">Correo electrónico:</mat-label>
+                <input name="email" [(ngModel)]="usertochange.email" matInput placeholder="Correo electrónico" ngModel required>
+            </mat-form-field>
+            <!-- <mat-form-field class="input-form-user">
+                <mat-label class="label">Contraseña:</mat-label>
+                <input name="password" matInput placeholder="Contraseña" ngModel>
+            </mat-form-field> -->
+            <button aria-label="Show an example snack-bar" type="submit" class="btn-form-user" mat-raised-button color="primary">Editar</button>
+          
+        </form>
+      </div>
+      
+</div>
+<router-outlet></router-outlet>

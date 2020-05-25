@@ -1,0 +1,21 @@
+.form-container{
+    width: 100%;
+    /* background: rgb(141, 217, 247); */
+    height: 400px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.form-container > h5 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.input-full-width{
+    width: 80% !important;
+    margin: auto;
+    display: block;
+}
+.btn-form-crud{
+    margin: auto;
+    display: block;
+}

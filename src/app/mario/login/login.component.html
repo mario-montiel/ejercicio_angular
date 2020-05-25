@@ -1,0 +1,16 @@
+<div class="form-container">
+    <h5>Login</h5>
+    <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+        <mat-form-field class="input-full-width">
+            <mat-label class="label">Ingrese su usuario</mat-label>
+            <input name="email" class="input" matInput placeholder="Usuario" ngModel>
+        </mat-form-field>
+        <mat-form-field class="input-full-width">
+            <mat-label class="label">Ingrese su contraseña</mat-label>
+            <input name="password" class="input" matInput placeholder="Contraseña" ngModel>
+        </mat-form-field>
+        <button type="submit" class="btn-form-crud" mat-raised-button color="primary">Acceder</button>
+      
+    </form>
+</div>
+<router-outlet></router-outlet>
