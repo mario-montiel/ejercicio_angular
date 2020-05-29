@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './mario/login/login.component';
 import { UserDetailsComponent } from './mario/user-details/user-details.component';
 import { UsersComponent } from './mario/users/users.component';
+import { GlobalConstantsService } from './common/global-constants.service';
 
 const routes: Routes = [];
 
@@ -20,7 +21,7 @@ const routes: Routes = [];
     CrudComponent,
     LoginComponent,
     UserDetailsComponent,
-    UsersComponent
+    UsersComponent,
   ],
   imports: [
     MaterialModule,
@@ -29,7 +30,7 @@ const routes: Routes = [];
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [GlobalConstantsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

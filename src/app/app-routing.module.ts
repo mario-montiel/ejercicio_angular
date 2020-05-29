@@ -10,9 +10,9 @@ import { UserDetailsComponent } from './mario/user-details/user-details.componen
 
 const routes: Routes = [
   // Rutas Mario
-  {path: 'mario/login', component: LoginComponent},
-  {path: 'mario/home', component: UsersComponent},
-  {path: 'mario/user-details/:id', component: UserDetailsComponent}
+  {path: 'mario/login', component: LoginComponent },
+  {path: 'mario/home', component: UsersComponent },
+  {path: 'mario/user-details/:id', component: UserDetailsComponent }
 ];
 
 @NgModule({

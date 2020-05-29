@@ -1,3 +1,46 @@
+.nav{
+    background: rgb(47, 137, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+    z-index: 1;
+}
+.ul-nav .p-nav{
+    position: absolute;
+    left: 0;
+    padding-left: 50px;
+    font-size: 25px;
+}
+.ul-nav > .li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+    font-size: 16px;
+}
+.ul-nav .li-nav-user{
+    position: absolute;
+    right: 0;
+    padding: 0;
+    /* padding-right: 70px; */
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.ul-nav .a-nav{
+    color: #fff !important;
+}
+.ul-nav .btn-user-nav{
+    position: absolute;
+    right: 0;
+    margin: -5px;
+    padding: 0;
+    z-index: 2;
+    padding-right: 100px;
+}
+
+
 .user-crud h5{
     margin-top: 30px;
     margin-bottom: 30px;

@@ -1,4 +1,21 @@
 <div class="user-crud">
+    <div>
+        <nav class="nav">
+            <ul class="ul-nav">
+                <p class="p-nav">Bienvenido a la práctica 1</p>
+                <li class="li li-nav"><a class="a-nav" routerLink="/mario/login"> Mario </a></li>
+                <li class="li li-nav"><a class="a-nav" routerLink="/iovanna">Iovanna</a></li>
+                <li class="li li-nav">Juan</li>
+                <li class="li li-nav">Ángel</li>
+                <li class="li li-nav-user"><button class="btn-user-nav" mat-button [matMenuTriggerFor]="menu">Hola {{ username }}</button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="logout()">Cerrar sesión</button>
+                    </mat-menu>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
     <h5>Lista de usuarios</h5>
     <div class="container-message" *ngIf="msgUserDeleted !== 0">
         <p class="txt-message">Usuario eliminado con éxito</p>

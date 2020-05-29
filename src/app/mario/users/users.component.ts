@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../../models/user';
+import { GlobalConstantsService } from '../../common/global-constants.service';
+import {Router} from '@angular/router';
 
 const url = 'http://127.0.0.1:3000/users';
 
@@ -18,10 +20,13 @@ export class UsersComponent implements OnInit {
   msgUserEdited = 0;
   msgUserDeleted = 0;
   usertochange: any = {};
+  username = null;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) {
+   }
 
   ngOnInit(): void {
+    this.username = GlobalConstantsService.session.name;
     return this.getUsers();
   }
 
@@ -86,6 +91,17 @@ export class UsersComponent implements OnInit {
         this.getUsers();
       });
     }
+  }
+
+  logout() {
+    console.log('logout');
+    console.warn('xx');
+    this.http.post('http://127.0.0.1:3000/logout', '')
+      .subscribe((response) => {
+        console.log(response);
+        GlobalConstantsService.session = {};
+        this.router.navigate(['mario/login']);
+      });
   }
 
 }

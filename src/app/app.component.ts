@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { GlobalConstantsService } from './common/global-constants.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,13 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  username = GlobalConstantsService.session;
   constructor(private http: HttpClient) {}
-  title = 'client';
-  onSubmit(data){
-    this.http.post('http://127.0.0.1:3000/authJWT', data)
+
+  logout() {
+    this.http.get('logout')
     .subscribe((response) => {
-      console.warn(response);
+      console.log(response);
     });
-    console.warn(data);
   }
 }
