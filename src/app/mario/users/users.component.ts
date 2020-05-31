@@ -26,7 +26,7 @@ export class UsersComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.username = GlobalConstantsService.session.name;
+    this.username = GlobalConstantsService.session.user;
     return this.getUsers();
   }
 
