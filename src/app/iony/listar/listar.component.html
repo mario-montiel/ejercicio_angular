@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<div class="row mt-5">
+	<div class="col-5"></div>
+	<h1 class="ml-5">Colorburger</h1>
+</div>
+<div class="mt-5 ml-5 mr-5 row">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Color</th>
+				<th>Carne</th>
+				<th>Precio</th>
+				<th>Fecha</th>
+				<th>Editar</th>
+				<th>Eliminar</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let colorburguer of colorburgers">
+				<td>{{colorburguer.id}}</td>
+				<td>{{colorburguer.color}}</td>
+				<td>{{colorburguer.carne}}</td>
+				<td>{{colorburguer.precio}}</td>
+				<td>{{colorburguer.fecha_creacion}}</td>
+				<td><a type="bottom" class="btn btn-warning" href="">Editar</a></td>
+				<td><a type="bottom" class="btn btn-danger" href="">Eliminar</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

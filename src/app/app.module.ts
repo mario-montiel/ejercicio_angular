@@ -12,6 +12,10 @@ import { LoginComponent } from './mario/login/login.component';
 import { UserDetailsComponent } from './mario/user-details/user-details.component';
 import { UsersComponent } from './mario/users/users.component';
 import { GlobalConstantsService } from './common/global-constants.service';
+import { ListarComponent } from './iony/listar/listar.component';
+import { CrearComponent } from './iony/crear/crear.component';
+import { EditarComponent } from './iony/editar/editar.component';
+import { EliminarComponent } from './iony/eliminar/eliminar.component';
 
 const routes: Routes = [];
 
@@ -22,6 +26,10 @@ const routes: Routes = [];
     LoginComponent,
     UserDetailsComponent,
     UsersComponent,
+    ListarComponent,
+    CrearComponent,
+    EditarComponent,
+    EliminarComponent,
   ],
   imports: [
     MaterialModule,
