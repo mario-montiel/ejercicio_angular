@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(data){
+    console.log(data);
     // const headers = new Headers();
     // headers.append('Access-Control-Allow-Headers', 'Content-Type');
     // headers.append('Access-Control-Allow-Methods', 'GET');
@@ -24,9 +25,11 @@ export class LoginComponent implements OnInit {
     this.http.post('http://127.0.0.1:3000/authJWT', data,  {
       headers: {
         'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST'
       }
     })
     .subscribe((response) => {
+      console.log(response);
       if (response) {
         GlobalConstantsService.session = response;
         if (GlobalConstantsService.session) {
