@@ -33,6 +33,7 @@ export class UsersComponent implements OnInit {
   getUsers(){
     this.http.get('http://127.0.0.1:3000/users')
     .subscribe((response) => {
+      console.log(response)
       this.user = [];
       for (const u of (response as any)) {
         this.user.push({
