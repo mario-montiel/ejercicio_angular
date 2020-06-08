@@ -1,1 +1,22 @@
-<p>crear works!</p>
+<div class="form-add-user">
+	<form #addUserPost="ngForm" class="form-user" (ngSubmit)="add(addUserPost.value)">
+		<h5>Color Burger</h5>
+		<mat-form-field class="input-form-user">
+			<mat-label class="label">Color</mat-label>
+			<input name="color" matInput placeholder="color" ngModel required>
+		</mat-form-field>
+		<mat-form-field class="input-form-user">
+			<mat-label class="label">Carne</mat-label>
+			<input name="carne" matInput placeholder="carne" ngModel required>
+		</mat-form-field>
+		<mat-form-field class="input-form-user">
+			<mat-label class="label">precio</mat-label>
+			<input name="precio" matInput placeholder="precio" ngModel required>
+		</mat-form-field>
+		<mat-form-field class="input-form-user">
+			<mat-label class="label">fecha</mat-label>
+			<input name="fecha" matInput placeholder="fecha" ngModel required>
+		</mat-form-field>
+		<button aria-label="Show an example snack-bar" type="submit" class="btn-form-user" mat-raised-button color="primary">Agregar</button>
+	</form>
+</div>

@@ -13,6 +13,8 @@ import { GlobalConstantsService } from '../../common/global-constants.service';
 export class ListarComponent implements OnInit {
   
   colorburgers:Colorburger;
+  msgUserDeleted = 0;
+  colorb: any = [];
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -22,9 +24,19 @@ export class ListarComponent implements OnInit {
    }
 
   ngOnInit(): void {
-  	this.getColorburgers().subscribe(data=>{
-  		this.colorburgers = data;
-  	});
+    this.getColorburgers().subscribe(data=>{
+      this.colorburgers = data;
+    });
+  }
+  eliminar(objeto){
+    this.http.delete('http://127.0.0.1:3000/colorburger/eliminar/' + objeto)
+      .subscribe((response) => {
+        if (response){
+          this.msgUserDeleted = 1;
+        }
+        this.colorb = [];
+        this.getColorburgers();
+      });
   }
 
 }

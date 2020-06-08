@@ -33,8 +33,8 @@
 				<td>{{colorburguer.carne}}</td>
 				<td>{{colorburguer.precio}}</td>
 				<td>{{colorburguer.fecha_creacion}}</td>
-				<td><a type="bottom" class="btn btn-warning" href="">Editar</a></td>
-				<td><a type="bottom" class="btn btn-danger" href="">Eliminar</a></td>
+				<td><a type="bottom" class="btn btn-warning" routerLink="../../iony/editar/{{colorburguer.id}}">Editar</a></td>
+				<td><a type="bottom" class="btn btn-danger" (click)="eliminar(colorburguer.id)">Eliminar</a></td>
 			</tr>
 		</tbody>
 	</table>
