@@ -1,0 +1,25 @@
+<table class="table" style="width: 50%;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Propietario</th>
+        <th>Name</th>
+        <th>Nickname</th>
+        <th>age</th>
+        <th>editar</th>
+        <th>eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dog of dogs">
+        <td>{{ dog.id }}</td>
+        <td>{{ dog.Propietario }}</td>
+        <td>{{ dog.name }}</td>
+        <td>{{ dog.nickname }}</td>
+        <td>{{ dog.age }}</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+ 

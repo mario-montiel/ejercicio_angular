@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { CrudComponent } from './componets/users/crud/crud.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './mario/login/login.component';
 import { UserDetailsComponent } from './mario/user-details/user-details.component';
 import { UsersComponent } from './mario/users/users.component';
@@ -16,6 +16,7 @@ import { ListarComponent } from './iony/listar/listar.component';
 import { CrearComponent } from './iony/crear/crear.component';
 import { EditarComponent } from './iony/editar/editar.component';
 import { EliminarComponent } from './iony/eliminar/eliminar.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [];
 
@@ -36,7 +37,8 @@ const routes: Routes = [];
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CommonModule
   ],
   providers: [GlobalConstantsService],
   bootstrap: [AppComponent]

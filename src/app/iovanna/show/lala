@@ -1,0 +1,52 @@
+<div class="container-fluid" style="padding-top: 5rem;width:70%;" id="container">
+    <table class="table table-hover" id="tablaperro">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">name</th>
+          <th scope="col">nickname</th>
+          <th scope="col">age</th>
+          <th>editar</th>
+          <th>eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let d of dogs">
+          <th scope="row">{{ d.id }}</th>
+          <td>{{ d.name }}</td>
+          <td>{{ d.nickname }}</td>
+          <td>{{ d.age }}</td>
+
+          <td><button type="button" class="btn btn-warning">Editar</button></td>
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="form-add-dog">
+      <form #addUserPost="ngForm" class="form-dog" (ngSubmit)="addDog(addDogPost.value)">
+        <div class="container-message" *ngIf="msgDogAdded !== 0">
+          <p class="txt-message">Perro agregado con éxito</p>
+        </div>
+        <h5>Agregar Perro</h5>
+        <mat-form-field class="input-form-dog">
+          <mat-label class="label">Nombre</mat-label>
+          <input name="name" matInput placeholder="Nombre" ngModel required>
+        </mat-form-field>
+        <mat-form-field class="input-form-dog">
+          <mat-label class="label">Apodo</mat-label>
+          <input name="apodo" matInput placeholder="Apodo" ngModel required>
+        </mat-form-field>
+        <mat-form-field class="input-form-dog">
+          <mat-label class="label">Ingrese su contraseña</mat-label>
+          <input name="age" matInput placeholder="Edad" ngModel required>
+        </mat-form-field>
+        <button aria-label="Show an example snack-bar" type="submit" class="btn-form-dog" mat-raised-button
+          color="primary">Agregar</button>
+
+      </form>
+    </div>
+  </div>
+
+
